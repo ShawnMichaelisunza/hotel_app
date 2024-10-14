@@ -17,6 +17,8 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
+            $table->string('usertype')->default('admin');
+            $table->string('branch_loc')->default('Quezon City');
             $table->rememberToken();
             $table->timestamps();
         });
